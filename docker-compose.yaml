@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  mongo:
+    container_name: mongodb_database
+    image: mongo:latest
+    restart: 
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=12345
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
