@@ -4,9 +4,9 @@ services:
   mongo:
     container_name: mongodb_database
     image: mongo:latest
-    restart: 
+    restart: 'always'
     volumes:
-      - mongodb_data:/data/db
+      - ./mongodb_data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=12345
